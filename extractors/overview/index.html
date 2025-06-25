@@ -980,6 +980,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#computational-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computational Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
       Next Steps
@@ -1049,6 +1058,21 @@
 <h1 id="extractors-overview">Extractors Overview</h1>
 <h2 id="what-are-extractors">What are Extractors?</h2>
 <p>Extractors are components of the Sim4Life Plugin Framework that enable visualization and analysis of simulation results. They take raw simulation output data and transform it into meaningful visual representations and quantitative metrics that help users understand the physics being simulated.</p>
+<hr />
+<h2 id="computational-flow">Computational Flow</h2>
+<p>The main steps in the extractor's operation are:</p>
+<ul>
+<li>
+<p><strong>DoComputeOutputAttributes</strong>: This method is called to prepare the extractor before any data is requested. It sets up the output ports, loads metadata, and ensures that the extractor is ready to provide results.</p>
+</li>
+<li>
+<p><strong>DoComputeOutputData</strong>: This method is called when the postprocessing pipeline requests data for a specific output port. It performs the actual extraction and data loading for the requested result, such as reading a field or summary from disk.</p>
+</li>
+<li>
+<p><strong>GetOutputDataObject</strong>: This method returns the data object for a specific output port. It is used by Sim4Life to retrieve the results (such as a field or table) for visualization or further analysis.</p>
+</li>
+</ul>
+<p>These methods ensure that extractors can efficiently and reliably bring simulation results into the Sim4Life postprocessing pipeline.</p>
 <hr />
 <h2 id="next-steps">Next Steps</h2>
 <ul>
