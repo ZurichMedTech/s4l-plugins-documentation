@@ -15,14 +15,14 @@
         <link rel="canonical" href="https://ZurichMedTech.github.io/s4l-plugins-documentation/creating-a-plugin/creating-simulation/">
       
       
-        <link rel="prev" href="../using-cookiecutter/">
+        <link rel="prev" href="../../plugin-structure/tree-structure/">
       
       
         <link rel="next" href="../defining-settings/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -292,7 +292,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../using-cookiecutter/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -715,29 +715,6 @@
             Creating a Plugin
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../using-cookiecutter/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Using Cookiecutter
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -1435,7 +1412,7 @@
 
 
 <h1 id="creating-a-simulation-class">Creating a Simulation Class</h1>
-<p>The <code>Simulation</code> class is the central component of your S4L plugin. It serves as the container for all simulation settings and provides the core functionality for your physics model.</p>
+<p>The <code>Simulation</code> class is the central component of your Sim4Life plugin. It serves as the container for all simulation settings and provides the core functionality for your physics model.</p>
 <h2 id="simulation-class-structure">Simulation Class Structure</h2>
 <p>The <code>Simulation</code> class inherits from <code>SimulationBase</code> and implements several key methods:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Simulation</span><span class="p">(</span><span class="n">SimulationBase</span><span class="p">):</span>
@@ -1448,7 +1425,7 @@
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="nd">@classmethod</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_simulation_type_name</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display name for this simulation type in the S4L interface.&quot;&quot;&quot;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display name for this simulation type in the Sim4Life interface.&quot;&quot;&quot;</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="k">return</span> <span class="s2">&quot;My Physics Simulation&quot;</span>
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
 <a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="nd">@classmethod</span>
@@ -1475,23 +1452,24 @@
 <a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
 <a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>        <span class="c1"># Schedule the help button connection</span>
 <a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>        <span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span><span class="o">.</span><span class="n">call_soon</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_connect_help</span><span class="p">)</span>
-<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>
-<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">on_initialize_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Create all the settings components for this simulation.&quot;&quot;&quot;</span>
-<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_setup_settings</span> <span class="o">=</span> <span class="n">setup_settings</span><span class="o">.</span><span class="n">SetupSettings</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_material_settings</span> <span class="o">=</span> <span class="n">material_settings</span><span class="o">.</span><span class="n">Materials</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_boundary_settings</span> <span class="o">=</span> <span class="n">boundary_settings</span><span class="o">.</span><span class="n">Boundaries</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_grid_settings</span> <span class="o">=</span> <span class="n">grid_settings</span><span class="o">.</span><span class="n">GridSettings</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_solver_settings</span> <span class="o">=</span> <span class="n">solver_settings</span><span class="o">.</span><span class="n">SolverSettings</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>
-<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>        <span class="c1"># Add any other settings components specific to your physics model</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>        <span class="c1"># Note: Using call_soon ensures that the help button connection does not interfere with the initialization process, especially after deserialization from file.</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">on_initialize_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Create all the settings components for this simulation.&quot;&quot;&quot;</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_setup_settings</span> <span class="o">=</span> <span class="n">setup_settings</span><span class="o">.</span><span class="n">SetupSettings</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_material_settings</span> <span class="o">=</span> <span class="n">material_settings</span><span class="o">.</span><span class="n">Materials</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_boundary_settings</span> <span class="o">=</span> <span class="n">boundary_settings</span><span class="o">.</span><span class="n">Boundaries</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_grid_settings</span> <span class="o">=</span> <span class="n">grid_settings</span><span class="o">.</span><span class="n">GridSettings</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_solver_settings</span> <span class="o">=</span> <span class="n">solver_settings</span><span class="o">.</span><span class="n">SolverSettings</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>        <span class="c1"># Add any other settings components specific to your physics model</span>
 </code></pre></div>
 <h2 id="required-methods">Required Methods</h2>
 <p>Your <code>Simulation</code> class must implement several required methods:</p>
 <h3 id="class-methods-for-identification">Class Methods for Identification</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nd">@classmethod</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">get_simulation_type_name</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the display name used in the S4L interface.&quot;&quot;&quot;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the display name used in the Sim4Life interface.&quot;&quot;&quot;</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="k">return</span> <span class="s2">&quot;My Physics Simulation&quot;</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nd">@classmethod</span>
@@ -1504,7 +1482,7 @@
 <a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the path to the icon used in the UI.&quot;&quot;&quot;</span>
 <a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="k">return</span> <span class="s2">&quot;icons/XSimulatorUI/new_simulation.ico&quot;</span>
 </code></pre></div>
-<p>These methods provide basic identification and display information for your simulation type in the S4L interface.</p>
+<p>These methods provide basic identification and display information for your simulation type in the Sim4Life interface.</p>
 <h3 id="initialization-and-setting-creation">Initialization and Setting Creation</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="s2">&quot;TreeItem&quot;</span><span class="p">,</span> <span class="n">sim_desc</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Simulation&quot;</span><span class="p">,</span> <span class="n">sim_notes</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Notes&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Initializes a new simulation instance with default settings.&quot;&quot;&quot;</span>
@@ -1564,6 +1542,9 @@
 <a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>    <span class="k">return</span> <span class="s2">&quot;my_package_name.solver.driver&quot;</span>
 </code></pre></div>
 <p>These methods provide the connections to your solver implementation and result extraction.</p>
+<blockquote>
+<p><strong>Note:</strong> At present, only the subprocess backend is supported. This means your solver must have all required third-party libraries available after the plugin is installed via pip. In the future, a remote execution backend using Docker containerization will be introduced to simplify dependency management and execution.</p>
+</blockquote>
 <h3 id="validation-and-api-model-conversion">Validation and API Model Conversion</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
@@ -1657,6 +1638,9 @@
 <a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a>
 <a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a>    <span class="c1"># ... Properties, validation, etc. ...</span>
 </code></pre></div>
+<blockquote>
+<p><strong>Note:</strong> Using call_soon ensures that the help button connection does not interfere with the initialization process, especially after deserialization from file.</p>
+</blockquote>
 <h2 id="common-patterns-and-best-practices">Common Patterns and Best Practices</h2>
 <p>When creating your simulation class:</p>
 <ol>
@@ -1742,6 +1726,12 @@
     
     
       <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

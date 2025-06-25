@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#quick-start-guide" class="md-skip">
+        <a href="#getting-started" class="md-skip">
           Skip to content
         </a>
       
@@ -292,7 +292,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../creating-a-plugin/using-cookiecutter/" class="md-tabs__link">
+        <a href="../../creating-a-plugin/creating-simulation/" class="md-tabs__link">
           
   
   
@@ -537,8 +537,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -571,8 +569,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -581,6 +577,25 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Start Guide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Start Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#creating-a-new-plugin" class="md-nav__link">
     <span class="md-ellipsis">
       Creating a New Plugin
@@ -588,67 +603,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#plugin-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Plugin Structure
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuring-your-plugin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuring Your Plugin
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implementing-a-basic-simulation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Implementing a Basic Simulation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testing-your-plugin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Testing Your Plugin
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installing-your-plugin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing Your Plugin
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#running-your-plugin-in-sim4life" class="md-nav__link">
-    <span class="md-ellipsis">
-      Running Your Plugin in Sim4Life
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
       Next Steps
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -829,29 +795,6 @@
             Creating a Plugin
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../creating-a-plugin/using-cookiecutter/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Using Cookiecutter
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -1401,123 +1344,52 @@
   
 
 
+<h2 id="getting-started">Getting Started</h2>
+<p>To begin, you need to start the Sim4Life Framework application.</p>
+<ul>
+<li><strong>On s4l-lite.io:</strong><br />
+  Click the <strong>New</strong> button to go to the service page.<br />
+<img alt="New Button in s4l-lite.io" src="../../assets/new_framework.png" width="300" /></li>
+<li><strong>On sim4life.io and sim4life.science:</strong><br />
+  Go to the <strong>APPS</strong> tab and click on the <strong>Sim4Life Framework</strong> tile.<br />
+<img alt="Sim4Life Framework Tile" src="../../assets/app_framework.png" width="900" /></li>
+</ul>
+<p>In both cases, you can then click on <strong>Create Project</strong> to start a new plugin project:</p>
+<p><img alt="Create Project Overview" src="../../assets/app_overview.png" width="600" /></p>
+<p>Once the application has started, you will see the familiar Sim4Life user interface. In the toolbar, look for the puzzle piece icon—this opens the Plugin Manager, where you can install existing simulator plugins. In the Simulator tab, you’ll notice a placeholder icon labeled “New Simulation”:</p>
+<p><img alt="Simulation Tab" src="../../assets/simulation_tab.png" width="900" /></p>
+<p>When you create your own plugin, your simulation will appear here.</p>
+<hr />
 <h1 id="quick-start-guide">Quick Start Guide</h1>
 <p>This guide will help you get started with creating your first Sim4Life plugin using our framework.</p>
 <h2 id="creating-a-new-plugin">Creating a New Plugin</h2>
-<p>The quickest way to create a new plugin is to use our cookiecutter template:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Install cookiecutter if you haven&#39;t already</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>pip<span class="w"> </span>install<span class="w"> </span>cookiecutter
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Create a new plugin from template</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>cookiecutter<span class="w"> </span>https://gitlab.com/sim4life/plugins/template.git
-</code></pre></div>
-<p>Follow the prompts to configure your plugin with the desired name, package structure, and features.</p>
-<h2 id="plugin-structure">Plugin Structure</h2>
-<p>After creating your plugin, you'll have a directory structure similar to this:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>my-plugin/
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├── LICENSE
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>├── manifest.json          # Plugin metadata for Sim4Life
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>├── README.md              # Documentation
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>├── setup.py               # Package installation
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>├── integration/           # Integration assets
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>│   └── simulator_icon.png # Icon for your plugin
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>├── src/                   # Source code
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>│   └── myplugin/          # Your package
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>│       ├── __init__.py
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>│       ├── register.py    # Plugin registration point
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>│       ├── controller/    # Business logic
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>│       ├── model/         # Data models
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>│       └── solver/        # Simulation solvers
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>└── tests/                 # Unit tests
-</code></pre></div>
-<h2 id="configuring-your-plugin">Configuring Your Plugin</h2>
-<p>The main configuration for your plugin is in the <code>manifest.json</code> file:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;My Simulation Plugin&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.1.0&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A simulation plugin for Sim4Life&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="nt">&quot;author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Your Name&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your.email@example.com&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="nt">&quot;entryPoints&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="nt">&quot;simulation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;myplugin.register:register_simulation&quot;</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="p">}</span>
-</code></pre></div>
-<h2 id="implementing-a-basic-simulation">Implementing a Basic Simulation</h2>
+<p>The quickest way to create a new plugin is to use our cookiecutter template embedded in a VS Code extension.</p>
+<p>Let's start the integrated development environment (IDE) and create your first plugin using a template. Follow these steps:</p>
 <ol>
-<li><strong>Define Simulation Settings</strong></li>
+<li>Open the burger menu and select <strong>Open Notebooks</strong>. This will launch JupyterLab in a new browser tab:
+   <img alt="Open Notebooks" src="../../assets/burger_notebooks.png" width="300" /></li>
+<li>In the JupyterLab launcher, click the <strong>VS Code</strong> icon. This will open Visual Studio Code in a new browser tab:
+   <img alt="VS Code Launcher" src="../../assets/launcher.png" width="900" /></li>
+<li>The Visual Studio Code environment comes pre-installed with Python extensions and a dedicated Sim4Life extension:
+   <img alt="VS Code Extensions" src="../../assets/vscode.png" width="900" /></li>
+<li>Click on the Sim4Life extension to access a set of tools specifically designed to support plugin development:
+   <img alt="Sim4Life Extension" src="../../assets/s4l_extension.png" width="900" /></li>
 </ol>
-<p>Edit <code>src/myplugin/model/setup_settings.py</code> to define the inputs for your simulation:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sim4life.plugins.schema</span><span class="w"> </span><span class="kn">import</span> <span class="n">Field</span><span class="p">,</span> <span class="n">FieldType</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sim4life.plugins.settings</span><span class="w"> </span><span class="kn">import</span> <span class="n">SettingsBase</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">MySimulationSettings</span><span class="p">(</span><span class="n">SettingsBase</span><span class="p">):</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Settings for my simulation.&quot;&quot;&quot;</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="n">input_value</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        <span class="n">field_type</span><span class="o">=</span><span class="n">FieldType</span><span class="o">.</span><span class="n">FLOAT</span><span class="p">,</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        <span class="n">default</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        <span class="n">min_value</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        <span class="n">max_value</span><span class="o">=</span><span class="mf">100.0</span><span class="p">,</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Input value for the simulation&quot;</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    <span class="p">)</span>
-</code></pre></div>
-<ol>
-<li><strong>Implement Simulation Logic</strong></li>
-</ol>
-<p>Edit <code>src/myplugin/model/simulation.py</code> to implement your simulation:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sim4life.plugins.simulation</span><span class="w"> </span><span class="kn">import</span> <span class="n">SimulationBase</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">.setup_settings</span><span class="w"> </span><span class="kn">import</span> <span class="n">MySimulationSettings</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">MySimulation</span><span class="p">(</span><span class="n">SimulationBase</span><span class="p">):</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;My first simulation implementation.&quot;&quot;&quot;</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="n">settings_class</span> <span class="o">=</span> <span class="n">MySimulationSettings</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Run the simulation.&quot;&quot;&quot;</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>        <span class="c1"># Access settings via self.settings</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>        <span class="n">input_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">input_value</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>        <span class="c1"># Implement your simulation logic here</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>        <span class="n">result</span> <span class="o">=</span> <span class="n">input_value</span> <span class="o">*</span> <span class="mi">2</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>        <span class="c1"># Return results</span>
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">result</span><span class="p">}</span>
-</code></pre></div>
-<ol>
-<li><strong>Register Your Simulation</strong></li>
-</ol>
-<p>Edit <code>src/myplugin/register.py</code> to register your simulation with Sim4Life:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sim4life.plugins.registry</span><span class="w"> </span><span class="kn">import</span> <span class="n">SimulationRegistry</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">.model.simulation</span><span class="w"> </span><span class="kn">import</span> <span class="n">MySimulation</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">register_simulation</span><span class="p">(</span><span class="n">registry</span><span class="p">:</span> <span class="n">SimulationRegistry</span><span class="p">):</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Register simulations with Sim4Life.&quot;&quot;&quot;</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="n">registry</span><span class="o">.</span><span class="n">register_simulation</span><span class="p">(</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>        <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;my-simulation&quot;</span><span class="p">,</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;My Simulation&quot;</span><span class="p">,</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;My first simulation for Sim4Life&quot;</span><span class="p">,</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>        <span class="n">simulation_class</span><span class="o">=</span><span class="n">MySimulation</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="p">)</span>
-</code></pre></div>
-<h2 id="testing-your-plugin">Testing Your Plugin</h2>
-<p>Run the tests to verify your implementation:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span>my-plugin
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>pytest
-</code></pre></div>
-<h2 id="installing-your-plugin">Installing Your Plugin</h2>
-<p>Install your plugin in development mode:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">cd</span><span class="w"> </span>my-plugin
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
-</code></pre></div>
-<h2 id="running-your-plugin-in-sim4life">Running Your Plugin in Sim4Life</h2>
-<ol>
-<li>Start Sim4Life</li>
-<li>Go to "Plugins" in the menu</li>
-<li>Select "Install Plugin" and navigate to your plugin directory</li>
-<li>Your simulation should now be available in the Simulations menu</li>
-</ol>
+<p>The Sim4Life extension provides several useful features for plugin development:</p>
+<ul>
+<li><strong>Create New Plugin:</strong> Launches a form based on a cookiecutter template to help you create a new plugin.</li>
+<li><strong>Reload Application:</strong> Restarts the application so that any changes you made to your plugin become available.</li>
+<li><strong>Enable Python Debugger:</strong> Opens ports on the Sim4Life core application, allowing you to connect a debugger for advanced troubleshooting.</li>
+<li><strong>Run Pyright:</strong> Runs the static type checker on your plugin to help catch errors early.</li>
+</ul>
+<p>Let's take a closer look at the <strong>Create New Plugin</strong> feature. When you select this option, a form will appear:</p>
+<p><img alt="Create New Plugin" src="../../assets/new_plugin.png" width="900" /></p>
+<p>Fill in the required information according to your needs and follow the prompts after clicking <strong>Create Plugin</strong>.</p>
+<p>If everything goes smoothly, you should see a new entry in the Simulation tab under "New Simulation":</p>
+<p><img alt="New Heat Plugin" src="../../assets/new_heat_plugin.png" width="900" /></p>
+<p>Additionally, VS Code will automatically open in the folder where your plugin's source code resides:</p>
+<p><img alt="VS Code Plugin Code" src="../../assets/vs_code_plugin_code.png" width="900" /></p>
+<p>The plugin is installed in edit mode, and since it is located in the <code>work/workspace</code> folder, it will persist across restarts of the same project. However, it is good practice to sync your new plugin with a GitHub repository to ensure your work is safely backed up and version controlled.</p>
 <h2 id="next-steps">Next Steps</h2>
 <p>Once you've created your basic plugin, you can:</p>
 <ul>
@@ -1597,6 +1469,12 @@
     
     
       <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

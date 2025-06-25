@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -292,7 +292,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../creating-a-plugin/using-cookiecutter/" class="md-tabs__link">
+        <a href="../../creating-a-plugin/creating-simulation/" class="md-tabs__link">
           
   
   
@@ -654,53 +654,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
+  <a href="#architecture-at-a-glance" class="md-nav__link">
     <span class="md-ellipsis">
-      Architecture
+      Architecture at a Glance
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#core-components" class="md-nav__link">
+  <a href="#key-components" class="md-nav__link">
     <span class="md-ellipsis">
-      Core Components
+      Key Components
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Core Components">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#model-layer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Model Layer
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#controller-layer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Controller Layer
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#solver-components" class="md-nav__link">
-    <span class="md-ellipsis">
-      Solver Components
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -723,9 +690,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
+  <a href="#learn-more" class="md-nav__link">
     <span class="md-ellipsis">
-      Next Steps
+      Learn More
     </span>
   </a>
   
@@ -835,29 +802,6 @@
             Creating a Plugin
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../creating-a-plugin/using-cookiecutter/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Using Cookiecutter
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -1408,100 +1352,74 @@
 
 
 <h1 id="plugin-structure-overview">Plugin Structure Overview</h1>
-<p>The S4L Plugin Framework follows a clear architectural pattern that separates concerns and provides a structured approach to simulation development. This overview explains the high-level organization of the plugin framework.</p>
-<h2 id="architecture">Architecture</h2>
-<p>The plugin framework follows a Model-View-Controller (MVC) pattern with the following components:</p>
-<pre class="mermaid"><code>graph TB
-    subgraph Model["Model Layer"]
-        simulation[Simulation Class]
-        settings[Settings Classes]
-        api_models[API Models]
-    end
-
-    subgraph View["View Layer (S4L UI)"]
-        tree[Tree View]
-        properties[Properties Panel]
-    end
-
-    subgraph Controller["Controller Layer"]
-        binding[Simulation Binding]
-        manager[Simulation Manager]
-    end
-
-    subgraph Solver["Solver Components"]
-        driver[Solver Driver]
-        extractor[Result Extractor]
-    end
-
-    simulation --&gt; binding
-    simulation --&gt; manager
-    binding --&gt; tree
-    manager --&gt; properties
-    simulation --&gt; api_models
-    api_models --&gt; driver
-    driver --&gt; extractor
-    extractor --&gt; View</code></pre>
-<h2 id="core-components">Core Components</h2>
-<h3 id="model-layer">Model Layer</h3>
-<p>The model layer represents the structure and data of your simulation:</p>
+<p>The Sim4Life Plugin Framework uses a clear, modular architecture to simplify simulation plugin development. This page summarizes the main concepts and directory layout.</p>
+<h2 id="architecture-at-a-glance">Architecture at a Glance</h2>
+<p>The framework follows a Model-View-Controller (MVC) pattern:</p>
 <ul>
-<li><strong>Simulation Class</strong>: The central container for all simulation components</li>
-<li><strong>Settings Classes</strong>: Specialized classes for different types of settings (materials, boundaries, etc.)</li>
-<li><strong>API Models</strong>: Data transfer objects that connect the UI model to the solver</li>
+<li><strong>Model</strong>: Simulation logic, settings, and data structures</li>
+<li><strong>Controller</strong>: Connects the model to the UI, handles user actions</li>
+<li><strong>Solver</strong>: Runs the simulation and processes results</li>
+<li><strong>View</strong>: Provided by the Sim4Life UI (tree view, property panels)</li>
 </ul>
-<h3 id="controller-layer">Controller Layer</h3>
-<p>The controller layer handles UI interaction and connects the model to the view:</p>
+<h2 id="key-components">Key Components</h2>
 <ul>
-<li><strong>Simulation Binding</strong>: Maps the model structure to the tree view hierarchy</li>
-<li><strong>Simulation Manager</strong>: Handles UI actions and property panel updates</li>
-</ul>
-<h3 id="solver-components">Solver Components</h3>
-<p>The computational part of the plugin:</p>
-<ul>
-<li><strong>Solver Driver</strong>: Implements the numerical algorithms to run the simulation</li>
-<li><strong>Result Extractor</strong>: Processes simulation results for visualization</li>
+<li><strong>Simulation Class</strong>: Central container for simulation logic</li>
+<li><strong>Settings Classes</strong>: Define simulation parameters (materials, boundaries, etc.)</li>
+<li><strong>API Models</strong>: Data objects connecting UI and solver</li>
+<li><strong>Simulation Binding</strong>: Maps model to the UI tree</li>
+<li><strong>Simulation Manager</strong>: Handles UI actions and updates</li>
+<li><strong>Solver Driver</strong>: Runs the core simulation algorithms</li>
+<li><strong>Result Extractor</strong>: Prepares results for visualization</li>
 </ul>
 <h2 id="directory-structure">Directory Structure</h2>
-<p>A typical plugin has the following directory structure:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>plugin-name/
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>s4l-plugin-heat-conduction/
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── LICENSE
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── README.md
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── setup.py
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├── src/
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│   └── package_name/
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│       ├── __init__.py
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│       ├── register.py         # Plugin registration point
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│       ├── controller/         # UI controller components
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│       │   ├── __init__.py
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│       │   ├── simulation_binding.py
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│       │   └── simulation_manager.py
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│       ├── model/              # Simulation model components
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>│       │   ├── __init__.py
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>│       │   ├── simulation.py   # Main simulation class
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>│       │   ├── *_settings.py   # Various settings classes
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>│       │   └── simulation_extractor.py
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>│       └── solver/             # Solver implementation
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>│           ├── __init__.py
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>│           ├── driver/
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>│           │   ├── __init__.py
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>│           │   ├── api_models.py
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>│           │   └── main.py     # Solver implementation
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>└── tests/                      # Test cases
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    └── test_simulation.py
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── manifest.json
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├── setup.py
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>├── integration/
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│   └── simulator_icon.png
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>└── src/
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    └── heat_conduction/
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        ├── __init__.py
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        ├── controller/
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        │   ├── __init__.py
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        │   ├── simulation_binding.py
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        │   └── simulation_manager.py
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        ├── model/
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        │   ├── __init__.py
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        │   ├── boundary_settings.py
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        │   ├── example_plots.py
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        │   ├── grid_settings.py
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        │   ├── material_settings.py
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        │   ├── setup_settings.py
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        │   ├── simulation.py
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        │   ├── simulation_extractor.py
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>        │   ├── solver_settings.py
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>        │   └── source_settings.py
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>        ├── register.py
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>        └── solver/
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>            ├── __init__.py
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>            └── driver/
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>                ├── __init__.py
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>                ├── api_models.py
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>                └── main.py
 </code></pre></div>
 <h2 id="plugin-registration-flow">Plugin Registration Flow</h2>
-<p>When S4L loads your plugin, the following sequence occurs:</p>
+<p>When Sim4Life starts, it loads plugins as follows:</p>
 <ol>
-<li>The entry point defined in <code>setup.py</code> is discovered</li>
-<li>The <code>register()</code> function in your plugin's <code>register.py</code> is called</li>
-<li>Your plugin registers its simulation type, binding factory, and manager factory</li>
-<li>S4L makes your simulation type available in the interface</li>
+<li>Discovers the entry point in <code>setup.py</code></li>
+<li>Calls the <code>register()</code> function in <code>register.py</code></li>
+<li>Registers the simulation type and UI factories</li>
+<li>Makes the simulation available in the Sim4Life interface</li>
 </ol>
-<h2 id="next-steps">Next Steps</h2>
-<p>To understand each component in more detail:</p>
+<blockquote>
+<p><strong>Tip:</strong> If a runtime error occurs during loading, the plugin will not appear in Sim4Life. Check the <strong>LOGGER</strong> in Sim4Life for error details.</p>
+</blockquote>
+<h2 id="learn-more">Learn More</h2>
 <ul>
-<li><a href="../entry-points/">Entry Points</a>: Learn how plugins register with S4L</li>
-<li><a href="../tree-structure/">Tree Structure</a>: Understand how the tree view is constructed</li>
+<li><a href="../entry-points/">Entry Points</a>: How plugins register with Sim4Life</li>
+<li><a href="../tree-structure/">Tree Structure</a>: How the UI tree is built</li>
 </ul>
 
 
@@ -1572,6 +1490,12 @@
     
     
       <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

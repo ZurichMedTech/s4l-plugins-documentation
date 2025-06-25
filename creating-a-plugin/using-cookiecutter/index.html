@@ -15,18 +15,14 @@
         <link rel="canonical" href="https://ZurichMedTech.github.io/s4l-plugins-documentation/creating-a-plugin/using-cookiecutter/">
       
       
-        <link rel="prev" href="../../plugin-structure/tree-structure/">
-      
-      
-        <link rel="next" href="../creating-simulation/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Using Cookiecutter - S4L Plugin Framework Documentation</title>
+        <title>Customizing a Plugin - S4L Plugin Framework Documentation</title>
       
     
     
@@ -82,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-cookiecutter" class="md-skip">
+        <a href="#customizing-a-plugin" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using Cookiecutter
+              Customizing a Plugin
             
           </span>
         </div>
@@ -286,13 +282,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../creating-simulation/" class="md-tabs__link">
           
   
   
@@ -672,31 +666,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
@@ -709,158 +698,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Creating a Plugin
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Using Cookiecutter
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Using Cookiecutter
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-cookiecutter" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is Cookiecutter?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-new-plugin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Creating a New Plugin
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#template-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Template Parameters
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#generated-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generated Structure
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-generated-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Generated Files
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#post-generation-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Post-Generation Steps
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-customizing-the-template" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example: Customizing the Template
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Next Steps
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
             
               
                 
@@ -1410,196 +1253,15 @@
   
 
 
-<h1 id="using-cookiecutter">Using Cookiecutter</h1>
-<p>The fastest way to create a new S4L plugin is to use the provided cookiecutter template. This approach gives you a complete plugin structure with all the necessary files and boilerplate code.</p>
-<h2 id="what-is-cookiecutter">What is Cookiecutter?</h2>
-<p><a href="https://cookiecutter.readthedocs.io/">Cookiecutter</a> is a command-line utility that creates projects from templates. For the S4L Plugin Framework, we provide a template that sets up all the required files and directory structure for a new simulation plugin.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>Before using the cookiecutter template, ensure you have:</p>
-<ol>
-<li>Python 3.11 or higher installed</li>
-<li>Cookiecutter installed: <code>pip install cookiecutter</code></li>
-<li>Access to the S4L cookiecutter template repository</li>
-</ol>
-<h2 id="creating-a-new-plugin">Creating a New Plugin</h2>
-<p>To create a new plugin using the template:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Navigate to your development directory</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>~/development
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Use cookiecutter with the template repository</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>cookiecutter<span class="w"> </span>https://github.com/yourusername/cookiecutter-s4l-plugin
-</code></pre></div>
-<p>You'll be prompted to enter various configuration parameters:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>plugin_name [heat-conduction]: my-physics-plugin
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>package_name [my_physics_plugin]: 
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>plugin_display_name [Heat Conduction]: My Physics Plugin
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>plugin_description [A simulation plugin for S4L]: A custom physics simulation for S4L
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>author_name [Your Name]: Jane Smith
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>author_email [your.email@example.com]: jane.smith@example.com
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>version [0.1.0]: 
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>python_requires [&gt;=3.11]: 
-</code></pre></div>
-<p>After answering these prompts, cookiecutter will create a new directory with your plugin name, containing a complete plugin structure.</p>
-<h2 id="template-parameters">Template Parameters</h2>
-<p>The cookiecutter template accepts the following parameters:</p>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>plugin_name</code></td>
-<td>Name of the plugin (used for directory and package names)</td>
-<td>heat-conduction</td>
-</tr>
-<tr>
-<td><code>package_name</code></td>
-<td>Python package name (automatically derived from plugin_name)</td>
-<td>heat_conduction</td>
-</tr>
-<tr>
-<td><code>plugin_display_name</code></td>
-<td>Display name shown in the S4L interface</td>
-<td>Heat Conduction</td>
-</tr>
-<tr>
-<td><code>plugin_description</code></td>
-<td>Short description of the plugin</td>
-<td>A simulation plugin for S4L</td>
-</tr>
-<tr>
-<td><code>author_name</code></td>
-<td>Your name</td>
-<td>Your Name</td>
-</tr>
-<tr>
-<td><code>author_email</code></td>
-<td>Your email address</td>
-<td>your.email@example.com</td>
-</tr>
-<tr>
-<td><code>version</code></td>
-<td>Initial version number</td>
-<td>0.1.0</td>
-</tr>
-<tr>
-<td><code>python_requires</code></td>
-<td>Python version requirement</td>
-<td>&gt;=3.11</td>
-</tr>
-</tbody>
-</table>
-<h2 id="generated-structure">Generated Structure</h2>
-<p>The cookiecutter template generates the following structure:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>my-physics-plugin/
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├── .gitignore
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>├── LICENSE
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>├── README.md
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>├── manifest.json
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>├── setup.py
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>├── src/
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>│   └── my_physics_plugin/
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>│       ├── __init__.py
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>│       ├── controller/
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>│       │   ├── __init__.py
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>│       │   ├── simulation_binding.py
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>│       │   └── simulation_manager.py
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>│       ├── model/
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>│       │   ├── __init__.py
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>│       │   ├── boundary_settings.py
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>│       │   ├── grid_settings.py
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>│       │   ├── material_settings.py
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>│       │   ├── setup_settings.py
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>│       │   ├── simulation.py
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>│       │   ├── simulation_extractor.py
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>│       │   ├── solver_settings.py
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>│       │   └── source_settings.py
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>│       ├── register.py
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>│       └── solver/
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>│           ├── __init__.py
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>│           └── driver/
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>│               ├── __init__.py
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>│               ├── api_models.py
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>│               └── main.py
-<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>└── tests/
-<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>    └── test_simulation.py
-</code></pre></div>
-<p>This structure includes:</p>
-<ul>
-<li>Basic project files (LICENSE, README.md, etc.)</li>
-<li>The Python package structure in the <code>src/</code> directory</li>
-<li>A complete model-view-controller implementation</li>
-<li>A solver template with API models</li>
-<li>A basic test file</li>
-</ul>
-<h2 id="key-generated-files">Key Generated Files</h2>
-<p>The cookiecutter template generates several key files:</p>
-<ul>
-<li><code>setup.py</code>: Package installation configuration with the S4L entry point</li>
-<li><code>manifest.json</code>: Plugin metadata for the S4L marketplace</li>
-<li><code>src/my_physics_plugin/register.py</code>: Plugin registration module</li>
-<li><code>src/my_physics_plugin/model/simulation.py</code>: Main simulation class</li>
-<li><code>src/my_physics_plugin/solver/driver/main.py</code>: Solver implementation template</li>
-</ul>
-<h2 id="post-generation-steps">Post-Generation Steps</h2>
-<p>After generating your plugin with cookiecutter:</p>
-<ol>
-<li>
-<p><strong>Install the plugin in development mode</strong>:
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>my-physics-plugin
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Customize the simulation model</strong>:</p>
-</li>
-<li>Modify the settings classes to match your physics model</li>
-<li>Update the API models to include your parameters</li>
-<li>
-<p>Implement your solver algorithm</p>
-</li>
-<li>
-<p><strong>Test your plugin</strong>:</p>
-</li>
-<li>Launch S4L and verify that your plugin appears in the interface</li>
-<li>Create a test simulation and ensure all components work as expected</li>
-<li>Run the provided test cases</li>
-</ol>
-<h2 id="example-customizing-the-template">Example: Customizing the Template</h2>
-<p>Let's look at a simple example of customizing the heat conduction template for a different physics problem:</p>
-<ol>
-<li>
-<p>Generate the plugin with cookiecutter:
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>cookiecutter<span class="w"> </span>https://github.com/yourusername/cookiecutter-s4l-plugin
-</code></pre></div></p>
-</li>
-<li>
-<p>Update the physics equation in <code>simulation.py</code>:
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="bp">self</span><span class="p">,</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">parent</span><span class="p">:</span> <span class="s2">&quot;TreeItem&quot;</span><span class="p">,</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="n">sim_desc</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Wave Simulation&quot;</span><span class="p">,</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="n">sim_notes</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Solves ∂²u/∂t² = c² ∇²u&quot;</span><span class="p">,</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">sim_desc</span><span class="p">,</span> <span class="n">sim_notes</span><span class="p">)</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Update the solver implementation in <code>main.py</code> to solve your equation</p>
-</li>
-<li>
-<p>Modify the settings classes to include your physics parameters</p>
-</li>
-</ol>
+<h1 id="customizing-a-plugin">Customizing a Plugin</h1>
+<p>The first step in customizing your Sim4Life plugin is to create a Simulation class. This class defines the core logic and behavior of your simulation plugin.</p>
+<h2 id="creating-a-simulation-class">Creating a Simulation Class</h2>
+<p>To create your simulation class, implement it in the <code>model/simulation.py</code> file of your plugin. This class should inherit from the appropriate base class and define the simulation parameters, logic, and any custom methods required for your physics model.</p>
+<p>For more details and examples, see the <a href="../creating-simulation/">Creating a Simulation Class</a> guide.</p>
 <h2 id="next-steps">Next Steps</h2>
-<p>Once you've created your plugin skeleton using cookiecutter, you'll want to:</p>
 <ul>
-<li><a href="../creating-simulation/">Create a Simulation Class</a>: Learn how to customize the main simulation class</li>
 <li><a href="../defining-settings/">Define Settings</a>: Create settings components for your physics model</li>
+<li><a href="../property-types/">Property Types</a>: Learn about the different property types you can use in your settings</li>
 <li><a href="../drag-and-drop/">Implement Drag and Drop</a>: Add support for geometry assignment</li>
 </ul>
 
@@ -1671,6 +1333,12 @@
     
     
       <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

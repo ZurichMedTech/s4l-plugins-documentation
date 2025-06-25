@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -292,7 +292,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../using-cookiecutter/" class="md-tabs__link">
+        <a href="../creating-simulation/" class="md-tabs__link">
           
   
   
@@ -723,29 +723,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../using-cookiecutter/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Using Cookiecutter
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../creating-simulation/" class="md-nav__link">
         
   
@@ -864,9 +841,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-custom-property-panels" class="md-nav__link">
+  <a href="#creating-custom-from-views" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating Custom Property Panels
+      Creating Custom From Views
     </span>
   </a>
   
@@ -1420,16 +1397,16 @@
 
 
 <h1 id="defining-settings">Defining Settings</h1>
-<p>Settings components are the building blocks of your simulation's user interface. They allow users to configure various aspects of the simulation through property panels in the S4L interface.</p>
+<p>Settings components are the building blocks of your simulation's user interface. They allow users to configure various aspects of the simulation through property panels in the Sim4Life interface.</p>
 <h2 id="types-of-settings-components">Types of Settings Components</h2>
-<p>The S4L Plugin Framework provides several types of settings components:</p>
+<p>The Sim4Life Plugin Framework provides several types of settings components:</p>
 <ol>
 <li><strong>Basic Settings</strong>: Simple configuration options like <code>SetupSettings</code> and <code>GridSettings</code></li>
 <li><strong>Collection Settings</strong>: Group-based settings like <code>Materials</code> and <code>Sources</code> that contain multiple items</li>
 <li><strong>Geometry-Connected Settings</strong>: Settings that can be associated with geometric entities, like <code>MaterialSettings</code></li>
 </ol>
 <h2 id="creating-a-basic-settings-component">Creating a Basic Settings Component</h2>
-<p>Basic settings components inherit from <code>TreeItem</code> and provide a property panel:</p>
+<p>Basic settings components inherit from <code>TreeItem</code> and provide a Form Views:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">GridSettings</span><span class="p">(</span><span class="n">TreeItem</span><span class="p">):</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="sd">    Defines the computational grid settings for the simulation domain.</span>
@@ -1474,7 +1451,7 @@
 <a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="sd">        Provides access to the property group containing editable grid parameters.</span>
 <a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>
-<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="sd">        These properties will be displayed in the S4L properties panel when the</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="sd">        These properties will be displayed in the Sim4Life properties panel when the</span>
 <a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="sd">        grid settings are selected in the UI.</span>
 <a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="sd">        &quot;&quot;&quot;</span>
 <a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_properties</span>
@@ -1604,7 +1581,7 @@
 <a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a>        <span class="p">)</span>
 </code></pre></div>
 <h2 id="property-types">Property Types</h2>
-<p>The S4L framework provides various property types for your settings. For a comprehensive list with detailed examples, see the <a href="../property-types/">Property Types</a> documentation.</p>
+<p>The Sim4Life framework provides various property types for your settings. For a comprehensive list with detailed examples, see the <a href="../property-types/">Property Types</a> documentation.</p>
 <p>Here are some commonly used property types in settings components:</p>
 <table>
 <thead>
@@ -1637,8 +1614,8 @@
 </tbody>
 </table>
 <p>Refer to the <a href="../property-types/">Property Types</a> documentation for a complete reference including collection types, UI control types, and detailed usage examples.</p>
-<h2 id="creating-custom-property-panels">Creating Custom Property Panels</h2>
-<p>The property panel is created using <code>XCoreHeadless.DialogOptions()</code> and populated with property objects:</p>
+<h2 id="creating-custom-from-views">Creating Custom From Views</h2>
+<p>The From Views is created using <code>XCoreHeadless.DialogOptions()</code> and populated with property objects:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Create the panel</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="bp">self</span><span class="o">.</span><span class="n">_properties</span> <span class="o">=</span> <span class="n">XCoreHeadless</span><span class="o">.</span><span class="n">DialogOptions</span><span class="p">()</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="bp">self</span><span class="o">.</span><span class="n">_properties</span><span class="o">.</span><span class="n">Description</span> <span class="o">=</span> <span class="s2">&quot;My Settings&quot;</span>
@@ -1661,6 +1638,9 @@
 <a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="n">enable_feature</span><span class="o">.</span><span class="n">Description</span> <span class="o">=</span> <span class="s2">&quot;Enable Advanced Features&quot;</span>
 <a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="bp">self</span><span class="o">.</span><span class="n">_properties</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="s2">&quot;enable_feature&quot;</span><span class="p">,</span> <span class="n">enable_feature</span><span class="p">)</span>
 </code></pre></div>
+<blockquote>
+<p><strong>Note:</strong> Always use properties as children of <code>DialogOptions</code> rather than directly. The pickling mechanism used for saving and loading simulations does not support raw property objects outside of a <code>DialogOptions</code> container.</p>
+</blockquote>
 <h2 id="handling-property-values">Handling Property Values</h2>
 <p>To retrieve property values when needed:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">as_api_model</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">api_models</span><span class="o">.</span><span class="n">MySettings</span><span class="p">:</span>
@@ -1836,6 +1816,12 @@
     
     
       <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

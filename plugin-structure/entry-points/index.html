@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -292,7 +292,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../creating-a-plugin/using-cookiecutter/" class="md-tabs__link">
+        <a href="../../creating-a-plugin/creating-simulation/" class="md-tabs__link">
           
   
   
@@ -802,29 +802,6 @@
             Creating a Plugin
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../creating-a-plugin/using-cookiecutter/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Using Cookiecutter
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -1375,9 +1352,9 @@
 
 
 <h1 id="plugin-entry-points">Plugin Entry Points</h1>
-<p>Entry points are how your plugin integrates with the S4L platform. They define how your plugin is discovered, loaded, and registered with the system.</p>
+<p>Entry points are how your plugin integrates with the Sim4Life platform. They define how your plugin is discovered, loaded, and registered with the system.</p>
 <h2 id="setup-file-configuration">Setup File Configuration</h2>
-<p>The primary integration point is defined in your plugin's <code>setup.py</code> file. This is where you register your plugin with the S4L framework:</p>
+<p>The primary integration point is defined in your plugin's <code>setup.py</code> file. This is where you register your plugin with the Sim4Life framework:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">setuptools</span><span class="w"> </span><span class="kn">import</span> <span class="n">find_packages</span><span class="p">,</span> <span class="n">setup</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">setup</span><span class="p">(</span>
@@ -1399,15 +1376,15 @@
 <a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="p">},</span>
 <a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="p">)</span>
 </code></pre></div>
-<p>The key part is the <code>entry_points</code> section, which tells S4L:</p>
+<p>The key part is the <code>entry_points</code> section, which tells Sim4Life:</p>
 <ol>
 <li>This package provides a plugin in the <code>s4l.simulator_plugins</code> category</li>
 <li>The plugin's entry point is the <code>register</code> function in the <code>my_package_name.register</code> module</li>
 </ol>
 <h2 id="registration-module">Registration Module</h2>
-<p>The <code>register.py</code> module is the main connection point between your plugin and S4L. It handles:</p>
+<p>The <code>register.py</code> module is the main connection point between your plugin and Sim4Life. It handles:</p>
 <ol>
-<li>Registering your simulation type with the S4L plugin registry</li>
+<li>Registering your simulation type with the Sim4Life plugin registry</li>
 <li>Providing factory functions to create UI bindings and managers for your simulation</li>
 </ol>
 <p>Here's an example of a typical registration module:</p>
@@ -1447,9 +1424,9 @@
 <a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>
 <a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="k">def</span><span class="w"> </span><span class="nf">register</span><span class="p">():</span>
 <a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="sd">    Registers all simulation components with the S4L plugin system.</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="sd">    Registers all simulation components with the Sim4Life plugin system.</span>
 <a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>
-<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="sd">    This function is the main entry point for the plugin and is called by S4L during startup.</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="sd">    This function is the main entry point for the plugin and is called by Sim4Life during startup.</span>
 <a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="sd">    &quot;&quot;&quot;</span>
 <a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Registering My Plugin...&quot;</span><span class="p">)</span>
 <a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>
@@ -1466,7 +1443,7 @@
 <a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Registered My Plugin components successfully&quot;</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="registration-process">Registration Process</h2>
-<p>When S4L starts, it performs the following steps to load your plugin:</p>
+<p>When Sim4Life starts, it performs the following steps to load your plugin:</p>
 <ol>
 <li>Discovers all entry points in the <code>s4l.simulator_plugins</code> category</li>
 <li>For each entry point, calls the specified function (in this case, <code>register()</code>)</li>
@@ -1475,7 +1452,7 @@
 <li>The <code>create_binding</code> factory function to handle UI tree mapping</li>
 <li>The <code>create_manager</code> factory function to handle property panels and UI actions</li>
 </ol>
-<p>Once registered, your simulation type becomes available in the S4L interface and users can create new simulations of your type.</p>
+<p>Once registered, your simulation type becomes available in the Sim4Life interface and users can create new simulations of your type.</p>
 <h2 id="plugin-manifest">Plugin Manifest</h2>
 <p>In addition to the Python entry points, your plugin should include a <code>manifest.json</code> file in its root directory, which provides metadata for the plugin marketplace:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
@@ -1496,7 +1473,7 @@
 <a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="p">}</span>
 </code></pre></div>
-<p>This metadata is used to display your plugin in the S4L plugin marketplace, allowing users to discover and install your plugin.</p>
+<p>This metadata is used to display your plugin in the Sim4Life plugin marketplace, allowing users to discover and install your plugin.</p>
 <h2 id="next-steps">Next Steps</h2>
 <p>Now that you understand how plugins are registered, learn about:</p>
 <ul>
@@ -1572,6 +1549,12 @@
     
     
       <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

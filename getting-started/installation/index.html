@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Skip to content
         </a>
       
@@ -292,7 +292,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../creating-a-plugin/using-cookiecutter/" class="md-tabs__link">
+        <a href="../../creating-a-plugin/creating-simulation/" class="md-tabs__link">
           
   
   
@@ -558,102 +558,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Requirements
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-the-plugin-framework" class="md-nav__link">
+  <a href="#sim4life-framework-application" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing the Plugin Framework
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Installing the Plugin Framework">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#option-1-using-pip" class="md-nav__link">
-    <span class="md-ellipsis">
-      Option 1: Using pip
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#option-2-from-source" class="md-nav__link">
-    <span class="md-ellipsis">
-      Option 2: From Source
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verifying-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Verifying Installation
+      Sim4Life Framework Application
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#plugin-development-environment-setup" class="md-nav__link">
+  <a href="#availability" class="md-nav__link">
     <span class="md-ellipsis">
-      Plugin Development Environment Setup
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Plugin Development Environment Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-venv" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using venv
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#using-conda" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using conda
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#plugin-template" class="md-nav__link">
-    <span class="md-ellipsis">
-      Plugin Template
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Next Steps
+      Availability
     </span>
   </a>
   
@@ -859,29 +784,6 @@
             Creating a Plugin
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../creating-a-plugin/using-cookiecutter/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Using Cookiecutter
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -1431,84 +1333,32 @@
   
 
 
-<h1 id="installation">Installation</h1>
-<p>This guide will walk you through the installation process for the Sim4Life Plugin Framework.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>Before installing the Sim4Life Plugin Framework, ensure you have the following:</p>
+<h1 id="introduction">Introduction</h1>
+<p>Welcome to the Sim4Life Plugin Framework documentation.</p>
+<h2 id="requirements">Requirements</h2>
+<p>To develop and run plugins with Sim4Life, you need:</p>
 <ul>
-<li>Sim4Life version 7.0 or higher</li>
-<li>Python 3.8 or higher</li>
-<li>pip (Python package manager)</li>
+<li>Appropriate Sim4Life modeling and postprocessing licenses.</li>
+<li>Basic infrastructure for Python development (API into Sim4Life)</li>
 </ul>
-<h2 id="installing-the-plugin-framework">Installing the Plugin Framework</h2>
-<h3 id="option-1-using-pip">Option 1: Using pip</h3>
-<p>The simplest way to install the Sim4Life Plugin Framework is via pip:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>sim4life-plugin-framework
-</code></pre></div>
-<h3 id="option-2-from-source">Option 2: From Source</h3>
-<p>To install from source:</p>
-<ol>
-<li>
-<p>Clone the repository:
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://gitlab.com/sim4life/plugin-framework.git
-</code></pre></div></p>
-</li>
-<li>
-<p>Navigate to the cloned directory:
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>plugin-framework
-</code></pre></div></p>
-</li>
-<li>
-<p>Install the package in development mode:
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
-</code></pre></div></p>
-</li>
-</ol>
-<h2 id="verifying-installation">Verifying Installation</h2>
-<p>To verify the installation, open a Python interpreter and run:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">sim4life.plugins</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">sim4life</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
-</code></pre></div>
-<p>If the installation was successful, this will print the version number of the installed framework.</p>
-<h2 id="plugin-development-environment-setup">Plugin Development Environment Setup</h2>
-<p>For plugin development, we recommend setting up a dedicated Python virtual environment:</p>
-<h3 id="using-venv">Using venv</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Create a virtual environment</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>s4l-plugin-env
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># Activate the environment</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1"># On Windows:</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>s4l-plugin-env<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># On Linux/macOS:</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="nb">source</span><span class="w"> </span>s4l-plugin-env/bin/activate
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1"># Install the framework and development tools</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>pip<span class="w"> </span>install<span class="w"> </span>sim4life-plugin-framework
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>pip<span class="w"> </span>install<span class="w"> </span>pytest<span class="w"> </span>pytest-cov
-</code></pre></div>
-<h3 id="using-conda">Using conda</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Create a conda environment</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>s4l-plugin-env<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Activate the environment</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>conda<span class="w"> </span>activate<span class="w"> </span>s4l-plugin-env
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1"># Install the framework and development tools</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>pip<span class="w"> </span>install<span class="w"> </span>sim4life-plugin-framework
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>conda<span class="w"> </span>install<span class="w"> </span>pytest<span class="w"> </span>pytest-cov
-</code></pre></div>
-<h2 id="plugin-template">Plugin Template</h2>
-<p>To quickly get started with a new plugin, use our plugin template:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Install cookiecutter</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>pip<span class="w"> </span>install<span class="w"> </span>cookiecutter
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># Create a new plugin from template</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>cookiecutter<span class="w"> </span>https://gitlab.com/sim4life/plugins/template.git
-</code></pre></div>
-<p>Follow the prompts to configure your new plugin.</p>
-<h2 id="next-steps">Next Steps</h2>
-<p>Once you have successfully installed the Sim4Life Plugin Framework, proceed to the <a href="../quick-start/">Quick Start</a> guide to create your first plugin.</p>
+<h2 id="sim4life-framework-application">Sim4Life Framework Application</h2>
+<p>For plugin development and management, we provide a standalone application called <strong>Sim4Life Framework</strong>. This tool allows you to:</p>
+<ul>
+<li>Develop your own plugins.</li>
+<li>Install and use plugins from other contributors.</li>
+</ul>
+<p>For this purpose, we have made code-server available with pre-installed extensions for Python development, as well as a specialized extension tailored for Sim4Life plugin development.</p>
+<p>Code-server is a browser-based version of Visual Studio Code that allows you to develop and manage your plugins directly from your web browser, without needing to install any software locally. This makes it easy to get started and ensures a consistent development environment across all platforms.</p>
+<h2 id="availability">Availability</h2>
+<p>The Sim4Life Framework is available in several Sim4Life platforms:</p>
+<ul>
+<li><strong>s4l-lite.io</strong>: The free version of Sim4Life, ideal for getting started.</li>
+<li><strong>sim4life.io</strong>: The commercial Sim4Life platform.</li>
+<li><strong>sim4life.science</strong>: The academic version for research and education.</li>
+</ul>
+<p>For information on obtaining an account and accessing these platforms, visit <a href="https://sim4life.swiss">sim4life.swiss</a>.</p>
+<hr />
+<p>Continue to the <a href="../quick-start/">Quick Start</a> guide to set up your environment and create your first plugin.</p>
 
 
 
@@ -1578,6 +1428,12 @@
     
     
       <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

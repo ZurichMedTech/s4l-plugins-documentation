@@ -2,86 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-06-25</lastmod>
     </url>
     <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/api-reference/core-classes/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-06-25</lastmod>
     </url>
     <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/creating-a-plugin/creating-simulation/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-06-25</lastmod>
     </url>
     <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/creating-a-plugin/defining-settings/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-06-25</lastmod>
     </url>
     <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/creating-a-plugin/drag-and-drop/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-06-25</lastmod>
     </url>
     <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/creating-a-plugin/property-types/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-06-25</lastmod>
     </url>
     <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/creating-a-plugin/using-cookiecutter/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-06-25</lastmod>
     </url>
     <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/extractors/creating-extractor/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-06-25</lastmod>
     </url>
     <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/extractors/overview/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-06-25</lastmod>
     </url>
     <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/extractors/vtk-integration/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-06-25</lastmod>
     </url>
     <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/getting-started/installation/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-06-25</lastmod>
     </url>
     <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/getting-started/quick-start/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-06-25</lastmod>
     </url>
     <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/plugin-structure/entry-points/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-06-25</lastmod>
     </url>
     <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/plugin-structure/overview/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-06-25</lastmod>
     </url>
     <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/plugin-structure/tree-structure/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-06-25</lastmod>
     </url>
     <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/simulation-models/overview/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-06-25</lastmod>
     </url>
     <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/simulation-models/physics-models/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-06-25</lastmod>
     </url>
     <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/simulation-models/validation/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-06-25</lastmod>
     </url>
     <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/solver-implementation/api-models/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-06-25</lastmod>
     </url>
     <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/solver-implementation/main-solver/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-06-25</lastmod>
     </url>
     <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/solver-implementation/writing-solver/</loc>
-         <lastmod>2025-05-13</lastmod>
+         <lastmod>2025-06-25</lastmod>
     </url>
 </urlset>
