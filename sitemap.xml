@@ -5,10 +5,6 @@
          <lastmod>2025-06-25</lastmod>
     </url>
     <url>
-         <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/api-reference/core-classes/</loc>
-         <lastmod>2025-06-25</lastmod>
-    </url>
-    <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/creating-a-plugin/creating-simulation/</loc>
          <lastmod>2025-06-25</lastmod>
     </url>
@@ -25,19 +21,11 @@
          <lastmod>2025-06-25</lastmod>
     </url>
     <url>
-         <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/creating-a-plugin/using-cookiecutter/</loc>
-         <lastmod>2025-06-25</lastmod>
-    </url>
-    <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/extractors/creating-extractor/</loc>
          <lastmod>2025-06-25</lastmod>
     </url>
     <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/extractors/overview/</loc>
-         <lastmod>2025-06-25</lastmod>
-    </url>
-    <url>
-         <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/extractors/vtk-integration/</loc>
          <lastmod>2025-06-25</lastmod>
     </url>
     <url>
@@ -61,23 +49,7 @@
          <lastmod>2025-06-25</lastmod>
     </url>
     <url>
-         <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/simulation-models/overview/</loc>
-         <lastmod>2025-06-25</lastmod>
-    </url>
-    <url>
-         <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/simulation-models/physics-models/</loc>
-         <lastmod>2025-06-25</lastmod>
-    </url>
-    <url>
-         <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/simulation-models/validation/</loc>
-         <lastmod>2025-06-25</lastmod>
-    </url>
-    <url>
          <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/solver-implementation/api-models/</loc>
-         <lastmod>2025-06-25</lastmod>
-    </url>
-    <url>
-         <loc>https://ZurichMedTech.github.io/s4l-plugins-documentation/solver-implementation/main-solver/</loc>
          <lastmod>2025-06-25</lastmod>
     </url>
     <url>
