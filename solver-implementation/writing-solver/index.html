@@ -73,7 +73,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -129,7 +129,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
@@ -1121,7 +1121,7 @@
 <h1 id="writing-a-solver">Writing a Solver</h1>
 <p>The solver is where the actual physics computations happen in your simulation plugin. This page explains how to implement a solver for your plugin, covering the overall structure, key components, and best practices.</p>
 <h2 id="solver-architecture">Solver Architecture</h2>
-<p>The S4L Plugin Framework uses a clean separation between the UI model and the solver. This is done through:</p>
+<p>The Sim4Life Plugin Framework uses a clean separation between the UI model and the solver. This is done through:</p>
 <ol>
 <li><strong>API Models</strong>: Simple data transfer objects that pass simulation parameters to the solver</li>
 <li><strong>Solver Driver</strong>: The main implementation of your numerical solver</li>
@@ -1328,7 +1328,7 @@
 <a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>    <span class="p">)</span>
 </code></pre></div>
 <h2 id="using-vtk-for-output">Using VTK for Output</h2>
-<p>The S4L framework expects results in VTK format. You can use libraries like PyVista to generate these files:</p>
+<p>The Sim4Life framework expects results in VTK format. You can use libraries like PyVista to generate these files:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">save_vtk_rectilinear_grid</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">data_name</span><span class="p">,</span> <span class="n">grid</span><span class="p">,</span> <span class="n">output_path</span><span class="p">):</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Save a scalar field as a VTK rectilinear grid file.&quot;&quot;&quot;</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    <span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
