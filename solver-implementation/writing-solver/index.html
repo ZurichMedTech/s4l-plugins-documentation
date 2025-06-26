@@ -1141,17 +1141,17 @@
 <h2 id="solver-location">Solver Location</h2>
 <p>Your solver implementation should be located in the <code>solver/driver</code> package of your plugin:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>src/
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>└── my_package_name/
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    └── solver/
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        ├── __init__.py
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        └── driver/
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>            ├── __init__.py
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>            ├── api_models.py  # Data transfer objects
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>            └── main.py        # Main solver implementation
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>└──<span class="w"> </span>my_package_name/
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span>└──<span class="w"> </span>solver/
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span>├──<span class="w"> </span>__init__.py
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span>└──<span class="w"> </span>driver/
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span>├──<span class="w"> </span>__init__.py
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">            </span>├──<span class="w"> </span>api_models.py<span class="w">  </span><span class="c1"># Data transfer objects</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span>└──<span class="w"> </span>main.py<span class="w">        </span><span class="c1"># Main solver implementation</span>
 </code></pre></div>
 <h2 id="command-line-interface">Command-Line Interface</h2>
 <p>The solver is executed as a separate process with a standardized command-line interface:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python -m my_package_name.solver.driver.main -i input_file.json -o output_folder
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">my_package_name</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">main</span> <span class="o">-</span><span class="n">i</span> <span class="n">input_file</span><span class="o">.</span><span class="n">json</span> <span class="o">-</span><span class="n">o</span> <span class="n">output_folder</span>
 </code></pre></div>
 <p>You can customize how the solver process is launched by overriding the <code>solver_backend</code> method in your simulation class (see <a href="../../creating-a-plugin/creating-simulation/">Creating a Plugin</a>). By default, this method returns the backend type and no additional configuration:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">solver_backend</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">SolverBackend</span><span class="p">,</span> <span class="n">config_type_t</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]:</span>

@@ -1198,11 +1198,13 @@
 </tr>
 </tbody>
 </table>
-<p>Choose the entity types that make sense for your component. For example:
-- Material properties typically apply to bodies (volumes)
-- Boundary conditions typically apply to faces (surfaces)
-- Point sources or sensors typically apply to vertices (points)
-- Line sources typically apply to edges (curves)</p>
+<p>Choose the entity types that make sense for your component. For example:</p>
+<ul>
+<li>Material properties typically apply to bodies (volumes)</li>
+<li>Boundary conditions typically apply to faces (surfaces)</li>
+<li>Point sources or sensors typically apply to vertices (points)</li>
+<li>Line sources typically apply to edges (curves)</li>
+</ul>
 <h2 id="working-with-associated-geometries">Working with Associated Geometries</h2>
 <p>Once geometric entities are associated with your component, you can access them through the <code>_geometries</code> collection:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>

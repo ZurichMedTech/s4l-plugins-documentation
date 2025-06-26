@@ -1095,7 +1095,7 @@
 <h2 id="what-is-sim4life-plugin-framework">What is Sim4Life Plugin Framework?</h2>
 <p>The Sim4Life Plugin Framework is an extensible architecture for creating custom physics simulations within the Sim4Life platform. It provides a structured way to:</p>
 <ul>
-<li>Create interactive UI components for simulation setup and configuration </li>
+<li>Create interactive UI components for simulation setup and configuration</li>
 <li>Implement numerical solvers for the simulation equations</li>
 <li>Visualize and analyze simulation results</li>
 </ul>
@@ -1111,11 +1111,12 @@
 <h2 id="example-heat-conduction-plugin">Example: Heat Conduction Plugin</h2>
 <p>This documentation uses a heat conduction simulation plugin as a comprehensive example. This plugin solves the steady-state heat equation:</p>
 <div class="arithmatex">\[\nabla \cdot (k \nabla T) + Q = 0\]</div>
-<p>Where:
-- <span class="arithmatex">\(T\)</span> is the temperature field
-- <span class="arithmatex">\(k\)</span> is the thermal conductivity
-- <span class="arithmatex">\(Q\)</span> is the volumetric heat source</p>
-<p><img alt="Heat Conduction Simulation" src="assets/images/heat_conduction.png" /></p>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(T\)</span> is the temperature field</li>
+<li><span class="arithmatex">\(k\)</span> is the thermal conductivity</li>
+<li><span class="arithmatex">\(Q\)</span> is the volumetric heat source</li>
+</ul>
 <p>The heat conduction example demonstrates all core aspects of plugin development:</p>
 <ul>
 <li>Creating a tree-structured simulation model</li>
@@ -1123,6 +1124,7 @@
 <li>Implementing a finite difference solver</li>
 <li>Extracting and visualizing temperature fields and heat flux</li>
 </ul>
+<p><img alt="Heat Conduction Simulation" src="assets/heat_plugin_setup.gif" /></p>
 <h2 id="getting-started">Getting Started</h2>
 <p>Ready to start developing? Check out the <a href="getting-started/quick-start/">Quick Start Guide</a> to create your first simulation plugin!</p>
 <hr />
